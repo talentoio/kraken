@@ -1,0 +1,39 @@
+definitions:
+  dto.LTP:
+    properties:
+      amount:
+        type: string
+      pair:
+        type: string
+    type: object
+  dto.LTPResponse:
+    properties:
+      ltp:
+        items:
+          $ref: '#/definitions/dto.LTP'
+        type: array
+    type: object
+host: localhost:8080
+info:
+  contact:
+    name: Yuri Gasparyan
+  description: Kraken parser LTP API
+  title: LTP API
+  version: "1.0"
+paths:
+  /api/v1/ltp:
+    get:
+      description: Get LTP data for all available pairs
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dto.LTPResponse'
+        "500":
+          description: Internal Server Error
+      summary: Get LTP data
+      tags:
+      - LTP
+swagger: "2.0"

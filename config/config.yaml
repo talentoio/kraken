@@ -1,0 +1,15 @@
+SERVER:
+  PORT: 8080
+
+KRAKEN:
+    HOST: "api.kraken.com"
+    UPDATEDURATION: "1s"
+    REQUESTTIMEOUT: "2s"
+
+CACHE:
+  EXPIRE: "1m"
+
+AVAILABLEPAIRS:
+  - BTCCHF
+  - BTCEUR
+  - BTCUSD

@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  kraken_v1:
+    build:
+      dockerfile: build/Dockerfile
+      context: .
+    ports:
+      - "8080:8080"
